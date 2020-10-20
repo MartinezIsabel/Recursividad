@@ -19,7 +19,7 @@ public class Recursividad {
          
           switch (op) {
             case 1:
-              fibonacci(0,1);  
+              fibonacci(0,1,0);
        
             break;
             //
@@ -45,26 +45,16 @@ public class Recursividad {
             break;
             //
             default:
-                    System.out.println("Solo se aceptan numeros enteros del 1 al 6");
+                    
            break;
           }
     }
-    private static void fibonacci(int a,int b){
-        int num;
-        if (a==0) {
-            System.out.print(a+","+b);
-            num=a;
-            a=b;
-            b=num+b;
-        }
-        if (a>0) {
-            System.out.print(","+b);
-            num=a;
-            a=b;
-            b=num+b;
-        }
-        if (b<=21) {
-            fibonacci(a,b);
+    private static void fibonacci(int a,int b, int c){
+        for(int i=0;i<=6;i++){
+        c=a+b;
+        a=b;
+        b=c;
+        System.out.println(""+c);
         }
     }
     private static void numeros(int a){
